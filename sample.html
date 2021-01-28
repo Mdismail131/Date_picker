@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+</head>
+<body>
+  <input type="text" class="datepicker">
+</body>
+<script>
+  // ​$("#dateform").datepicker({
+  //   beforeShowDay: function(date) {
+  //       var day = date.getDay();
+  //       return [(day != 1 && day != 2)];
+  //   }
+  // })​​​​​;​
+  $(".datepicker").datepicker({ beforeShowDay: function(date){ 
+  var day = date.getDay(); 
+  return [day == 1 || day == 6,""];
+} });
+
+</script>
+</html>
